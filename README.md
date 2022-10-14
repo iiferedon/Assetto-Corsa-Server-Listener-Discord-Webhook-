@@ -63,8 +63,6 @@ git clone https://github.com/iiferedon/Assetto-Corsa-Server-Listener-Discord-Web
 cd /Assetto-Corsa-Server-Listener-Discord-Webhook-/
 pip install -r requirements.txt
 
-#Start Script
-python3 ACbot.py
 ```
 
 ### Installation
