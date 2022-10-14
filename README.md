@@ -58,7 +58,14 @@ I haven't seen anyone do this yet publicly so here is my code. :D
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Download the file.
+```sh
+git clone https://github.com/iiferedon/Assetto-Corsa-Server-Listener-Discord-Webhook-.git
+cd /Assetto-Corsa-Server-Listener-Discord-Webhook-/
+pip install -r requirements.txt
+
+-Start Script-
+python3 ACbot.py
+```
 
 ### Installation
 
