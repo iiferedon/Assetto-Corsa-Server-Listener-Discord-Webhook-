@@ -7,9 +7,8 @@ import sys
 from discord_webhook import DiscordWebhook, DiscordEmbed
 
 #Change these values
-webhook = DiscordWebhook(url="https://discord.com/api/webhooks/1029667170944299048/AzJPCxbefH8LeqgTjHuE-D0nHhxXN0UcqHswaVWHUUlNFZJvUYpqAcdG2nc0tXlkifpl")
-server_address = "67.219.109.1:8081"
-
+webhook = DiscordWebhook(url="WEBHOOK_URL")
+server_address = "SERVER_IP:SERVER_PORT"
 print("Script Started!")
 print("Developed by www.iiferedon.xyz")
 print("Discord: iiferedon#1337")
