@@ -2,7 +2,7 @@
 <h3 align="center">Shows player JOIN and DISCONNECT in any assetto corsa server and writes to a discord channel via a webhook.</h3>
 
   <p align="center">
-    <img src="images/example_discord.png" alt="Logo" >
+    <img src="example_discord.png" alt="Logo" >
     <br />
     <a href="https://iiferedon.xyz"><strong>My Website »</strong></a>
     <br />
