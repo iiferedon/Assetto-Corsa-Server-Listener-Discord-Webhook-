@@ -38,7 +38,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![discord example][product-example]
 
 Monitor any Assetto Corsa server to check if a player has joined or left the server.
 
