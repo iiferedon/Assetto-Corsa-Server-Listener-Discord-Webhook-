@@ -21,13 +21,13 @@ def main_loop():
       try:  
          url = "http://"+server_address+"/JSON%7C"
          request = Request(url)
-         response = urlopen(request)
+         response = urlopen(request, timeout=5)
          jso = response.read()
          response.close()
          #Load JSON
          parsed = json.loads(jso)
       except:
-         print("Error, server unavailable.")
+         print(Fore.RED +"Error, server unavailable.")
          sys.exit()
          
       #Check if file is empty on startup and writes to it
