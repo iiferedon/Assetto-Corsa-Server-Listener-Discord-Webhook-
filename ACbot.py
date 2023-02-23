@@ -4,6 +4,8 @@ from urllib.request import urlopen, Request
 import time
 import os
 import sys
+import colorama
+from colorama import Fore
 from discord_webhook import DiscordWebhook, DiscordEmbed
 
 #Change these values
@@ -33,6 +35,7 @@ def main_loop():
       while filesize == 0:
          with open(buffer, 'w') as json_file:
             json.dump(parsed, json_file)
+            print(Fore.GREEN +"Startup Buffer Initialized!")
             break
             
       #Counts the lines
@@ -65,9 +68,9 @@ def main_loop():
       if True:
          for i in range(num_lines):
             if parsed["Cars"][i]["IsConnected"] and read_json["Cars"][i]["IsConnected"]: #Value stays same, no join or leave
-               print("Users in session")
+               print(Fore.MAGENTA +"Users in session")
             elif read_json["Cars"][i]["IsConnected"] != True and parsed["Cars"][i]["IsConnected"]: #Joined Game
-               print("JOINED GAME: Player: " + parsed["Cars"][i]["DriverName"] + ", is driving: " + parsed["Cars"][i]["Model"] + ", with skin: " + parsed["Cars"][i]["Skin"])
+               print(Fore.GREEN +"JOINED GAME: Player: " + parsed["Cars"][i]["DriverName"] + ", is driving: " + parsed["Cars"][i]["Model"] + ", with skin: " + parsed["Cars"][i]["Skin"])
                title = "Player Connected"
                player = parsed["Cars"][i]["DriverName"]
                colour = 5763719
@@ -76,7 +79,7 @@ def main_loop():
                type = 1
                send_webhook(title, player, colour, model, skin, type)
             elif parsed["Cars"][i]["IsConnected"] != True and read_json["Cars"][i]["IsConnected"]: #Left Game
-               print("LEFT GAME: Player: " + parsed["Cars"][i]["DriverName"])
+               print(Fore.RED +"LEFT GAME: Player: " + parsed["Cars"][i]["DriverName"])
                title = "Player Disconnected"
                player = parsed["Cars"][i]["DriverName"]
                model = parsed["Cars"][i]["Model"]
@@ -89,7 +92,7 @@ def main_loop():
       #overwrite previous buffer with current server JSON
       with open(buffer, 'w') as json_file:
             json.dump(parsed, json_file)
-            print("wrote to buffer")
+            print(Fore.BLUE +"wrote to buffer")
             print("..")
 
 
