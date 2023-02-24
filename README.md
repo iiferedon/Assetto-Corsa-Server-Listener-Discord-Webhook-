@@ -89,6 +89,7 @@ _Below is an example of how you can install this webhook!_
 #Start Script
 python3 ACbot.py
 ```
+Ensure script is started before anyone is in the server.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
